@@ -21,7 +21,7 @@ def matrix_divided(matrix, div):
         or if div is not a number.
         ZeroDivisionError: If div is zero.
     """
-    if not isinstance(div, (int, float)):
+    if not isinstance(div, (int, float)) or isinstance(div, bool):
         raise TypeError("div must be a number")
 
     if div == 0:
@@ -33,7 +33,6 @@ def matrix_divided(matrix, div):
         raise TypeError(msg_type)
 
     row_length = 0
-
     msg_size = "Each row of the matrix must have the same size"
 
     for row in matrix:
@@ -44,8 +43,9 @@ def matrix_divided(matrix, div):
             raise TypeError(msg_size)
 
         for num in row:
-            if not type(num) in (int, float):
+            if not isinstance(num, (int, float)) or isinstance(num, bool):
                 raise TypeError(msg_type)
+
         row_length = len(row)
 
     new_m = map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix)
