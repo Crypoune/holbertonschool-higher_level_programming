@@ -20,14 +20,6 @@ Basics
     My name is Walter White
 
 
-``last_name`` is optional, by default is empty str.
-
-::
-
-    >>> say_my_name("Bob")
-    My name is Bob
-
-
 Errors
 ======
 
