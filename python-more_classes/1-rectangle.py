@@ -3,6 +3,7 @@
 This is a class Rectangle that defines a rectangle by width and height.
 """
 
+
 class Rectangle:
     """
     A class that defines a rectangle by its width and height.
