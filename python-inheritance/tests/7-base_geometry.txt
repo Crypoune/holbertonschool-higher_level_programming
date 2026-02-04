@@ -1,16 +1,18 @@
-===============================
+=============================
 The ``7-base_geometry`` module
-===============================
+=============================
 
 Using ``BaseGeometry``
 ======================
 
+Importing class from the module:
+
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Test area method (not implemented)
+===================================
+
     >>> bg = BaseGeometry()
-
-Test area method
-================
-
     >>> bg.area()
     Traceback (most recent call last):
     ...
@@ -19,12 +21,14 @@ Test area method
 Test valid integers
 ===================
 
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator("my_int", 12)
     >>> bg.integer_validator("width", 89)
 
-Test with string
-================
+Test with string instead of integer
+====================================
 
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator("name", "John")
     Traceback (most recent call last):
     ...
@@ -33,31 +37,80 @@ Test with string
 Test with zero
 ==============
 
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator("age", 0)
     Traceback (most recent call last):
     ...
     ValueError: age must be greater than 0
 
-Test with negative
-==================
+Test with negative number
+==========================
 
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator("distance", -4)
     Traceback (most recent call last):
     ...
     ValueError: distance must be greater than 0
 
-Test with boolean
-=================
+Test with boolean (should fail as not int)
+===========================================
 
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator("bool", True)
     Traceback (most recent call last):
     ...
     TypeError: bool must be an integer
 
+Test with list
+==============
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("list", [1, 2, 3])
+    Traceback (most recent call last):
+    ...
+    TypeError: list must be an integer
+
+Test with tuple
+===============
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("tuple", (1,))
+    Traceback (most recent call last):
+    ...
+    TypeError: tuple must be an integer
+
 Test with None
 ==============
 
+    >>> bg = BaseGeometry()
     >>> bg.integer_validator("none", None)
     Traceback (most recent call last):
     ...
     TypeError: none must be an integer
+
+Test with float
+===============
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("float", 3.14)
+    Traceback (most recent call last):
+    ...
+    TypeError: float must be an integer
+
+Test with dict
+==============
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("dict", {"key": "value"})
+    Traceback (most recent call last):
+    ...
+    TypeError: dict must be an integer
+
+Test with set
+=============
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("set", {1, 2})
+    Traceback (most recent call last):
+    ...
+    TypeError: set must be an integer
