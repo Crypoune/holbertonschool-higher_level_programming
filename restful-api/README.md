@@ -1,10 +1,10 @@
-# RESTful API Fundamentals — HTTP, curl, and Security
+# RESTful API Fundamentals: HTTP, curl, and Security
 
 This document summarizes the key concepts covered in Tasks 0 and 1 of the RESTful API project.
 
 ---
 
-# Task 0 — Basics of HTTP/HTTPS
+# Task 0: Basics of HTTP/HTTPS
 
 ## Difference Between HTTP and HTTPS
 
@@ -102,7 +102,7 @@ Contains HTML, JSON, or other data.
 
 ---
 
-# Task 1 — Consuming an API with curl
+# Task 1: Consuming an API with curl
 
 ## Checking curl Installation
 
