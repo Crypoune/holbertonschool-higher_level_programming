@@ -20,7 +20,11 @@ This repository contains projects completed during my training at Holberton Scho
 - python-input_output
 - python-serialization
 - python-object_relational_mapping
-- ...
+- python-server_side_rendering
+- python-...
+- python-...
+- python-...
+- python-...
 
 ### APIs
 
@@ -34,6 +38,6 @@ This repository contains projects completed during my training at Holberton Scho
 ### JavaScript
 
 - javascript-warm_up
-- ...
+- javascript-dom_manipulation
 
 > More projects will be added as I progress through the curriculum.
