@@ -1,5 +1,5 @@
 window.onload = function () {
-  fetch("https://hellosalut.stefanbohacek.dev/?lang=fr")
+  fetch("https://hellosalut.stefanbohacek.com/?lang=fr")
     .then((response) => response.json())
     .then((data) => {
       document.getElementById("hello").textContent = data.hello;
